@@ -97,7 +97,24 @@ __7. Access the application in browser__
 <img width="1896" height="870" alt="Screenshot 2025-08-19 103236" src="https://github.com/user-attachments/assets/d3a67904-8d4b-4a7b-b5c4-cb5879167518" />
 <img width="1919" height="873" alt="Screenshot 2025-08-19 103459" src="https://github.com/user-attachments/assets/6e38d9d2-436f-4b3a-9cfa-0f4c61ef8798" />
 
+---
 
+## 🚀 Usage
+
+- **Candidates:** Register online, upload documents, verify phone, track status.
+- **Admins:** Login via Django Admin, view all applications, review details, approve/reject, search/filter candidates, send status emails.
+- **Media Files:** Uploaded photos and certificates stored in `/media/` (set in settings).
+
+---
+
+## 🔒 Security & Validation
+
+- **CSRF Protection:** All forms protected against CSRF attacks.
+- **CAPTCHA & OTP:** Prevents bots and spam registrations.
+- **Email Validation:** Admin panel only accessible by superusers.
+- **File Upload Restrictions:** Accepts only required document types.
+
+---
 
 ##  🔑 Admin Access
 
