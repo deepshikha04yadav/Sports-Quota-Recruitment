@@ -14,7 +14,7 @@ Built using Django (Python Web Framework), this project ensures secure data hand
 
 * __Admin Panel__ – Superusers can approve, reject, or update candidate applications.
 
-* __Data Security__ – Validation checks for email, phone number, and date of birth.
+* __Data Security__ – Validation checks for email, and phone number.
 
 * __Database Management__ – Candidate details stored securely using SQLite (default) or MySQL.
 
