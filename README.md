@@ -4,6 +4,8 @@ The Sports Quota Recruitment System is a web-based application designed to strea
 
 Built using Django (Python Web Framework), this project ensures secure data handling, role-based access, and easy database management.
 
+The **Sports Quota Recruitment System** is a web-based application designed to streamline the process of candidate registration, verification, and management for sports quota admissions. Built with Django and customizable for any institution(made as a part of internship completion at BLW(Banaras Locomotive Works)), it provides secure, paperless workflows for both applicants and administrators.
+
 ---
 
 ## 🌟 Features
