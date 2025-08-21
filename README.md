@@ -25,7 +25,6 @@ Built using Django (Python Web Framework), this project ensures secure data hand
 Sports-Quota-Recruitment/
 │── Sports_Qouta/            # Project configuration (settings, urls, wsgi, asgi)
 │── registration/            # Django app for handling candidate registration
-│── db.sqlite3               # SQLite database (default database)
 │── manage.py                # Django management script
 ```
 ## ⚙️ Prerequisites
