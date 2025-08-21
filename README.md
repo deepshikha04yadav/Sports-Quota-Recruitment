@@ -88,6 +88,13 @@ __7. Access the application in browser__
 
 * Admin Panel → http://127.0.0.1:8000/admin/
 
+## Output
+<img width="1919" height="878" alt="Screenshot 2025-08-19 103148" src="https://github.com/user-attachments/assets/733a7fe0-9eda-4b08-b958-f21f8a868972" />
+<img width="1896" height="870" alt="Screenshot 2025-08-19 103236" src="https://github.com/user-attachments/assets/d3a67904-8d4b-4a7b-b5c4-cb5879167518" />
+<img width="1919" height="873" alt="Screenshot 2025-08-19 103459" src="https://github.com/user-attachments/assets/6e38d9d2-436f-4b3a-9cfa-0f4c61ef8798" />
+
+
+
 ##  🔑 Admin Access
 
 * Login with the credentials created using createsuperuser.
