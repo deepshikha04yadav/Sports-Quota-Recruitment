@@ -4,21 +4,24 @@ The Sports Quota Recruitment System is a web-based application designed to strea
 
 Built using Django (Python Web Framework), this project ensures secure data handling, role-based access, and easy database management.
 
-## Key Features
+---
 
-* __Candidate Registration__ – Candidates can apply online by filling in their personal, academic, and sports details.
+## 🌟 Features
 
-* __Unique Registration Number__ – Every candidate receives a unique registration ID.
+- **Candidate Registration:** Simple multi-step form collects personal, academic, and sports details.
+- **Unique Registration Number:** Auto-generated for every candidate for easy tracking.
+- **OTP Verification:** Mobile number verification ensures authentic registration.
+- **Document Uploads:** Candidates upload supporting certificates and documents (PDF, Doc, etc.).
+- **Captcha Security:** CAPTCHA is integrated to prevent spam submissions.
+- **Status Tracking:** Candidates can check their application status at any time using registration number and captcha.
+- **Admin Dashboard:** Superusers can review applications, approve/reject candidates, and view individual profiles.
+- **Email Notification:** Automatic email is sent to candidates when application status changes.
+- **Search & Filter:** Admins can quickly search applications by registration number.
+- **Logout & Session Security:** Secure session management with logout functionality for admins.
+- **Responsive UI:** Modern, mobile-friendly interface with clear navigation.
+- **Configurable Database:** Works out-of-the-box with SQLite, or switch to MySQL for production.
 
-* __Document Upload__ – Candidates can upload required certificates and documents.
-
-* __Admin Panel__ – Superusers can approve, reject, or update candidate applications.
-
-* __Data Security__ – Validation checks for email, and phone number.
-
-* __Database Management__ – Candidate details stored securely using SQLite (default) or MySQL.
-
-* __Simple UI__ – Easy-to-navigate web pages for candidates and administrators.
+---
 
 ## 📂 Project Structure
 ```
