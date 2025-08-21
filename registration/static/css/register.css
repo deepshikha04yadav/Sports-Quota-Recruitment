@@ -1,0 +1,165 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* background-color: #f0f8ff; */
+    margin: 0;
+    padding: 0;
+}
+.background-image {
+    position: fixed;   /* Stay fixed during scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/static/images/train.jpg");
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1;  /* Behind the content */
+}
+
+/* Optional: overlay to darken background for better contrast */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3); 
+    z-index: -1;
+}
+
+/* Center the form nicely */
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+form h3{
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Labels */
+form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* Inputs, Select, File Uploads */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form select,
+form input[type="file"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border-color: #4da3ff;
+    box-shadow: 0 0 5px rgba(77, 163, 255, 0.5);
+}
+
+/* Special styling for hints or instructions */
+form small {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Submit button */
+form button,
+form input[type="submit"] {
+    background-color: #4da3ff;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 15px;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: #1d8fff;
+}
+
+/* Multiple file inputs spacing */
+form input[type="file"] {
+    border: none;
+    padding: 5px 0;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+    form button,
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+
+ .phone-verification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+.verify-btn {
+    background: #4da3ff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.verify-btn:hover {
+    background: #1d8fff;
+}
+.verify-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+.otp-input {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.status-message {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.success { color: green; }
+.error { color: red; }
+.info { color: blue; }
+.verified-badge {
+    background: #59d659;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}

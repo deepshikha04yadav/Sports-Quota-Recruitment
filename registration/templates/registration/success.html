@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef6ff;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .background-image {
+    position: fixed;   /* Stay fixed during scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/static/images/train.jpg");
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1;  /* Behind the content */
+}
+
+/* Optional: overlay to darken background for better contrast */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3); 
+    z-index: -1;
+}
+        .box {
+            background: white;
+            padding: 40px;
+            margin: auto;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        h1 {
+            color: green;
+        }
+        .reg-no {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 18px;
+            background-color: #4da3ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        .btn:hover {
+            background-color: #1d8fff;
+        }
+    </style>
+</head>
+<body>
+
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
+    <div class="box">
+        <h1>Registration Successful 🎉</h1>
+        <p class="reg-no">Your Registration Number: <br><strong>{{ reg_no }}</strong></p>
+        
+        <a class="btn" href="{% url 'home' %}">Go to Home</a>
+    </div>
+</body>
+</html>

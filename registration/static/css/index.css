@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    /* background-color: #def5d9; */
+}
+
+.background-image {
+    position: fixed;   /* Stay fixed during scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/static/images/rail.jpg");
+    background-size: cover;
+    background-position: center center;
+    filter: blur(7px); /* Adjust blur intensity */
+    z-index: -1;  /* Behind the content */
+}
+
+/* Optional: overlay to darken background for better contrast */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background: rgba(0,0,0,0.3);  */
+    z-index: -1;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #76cdfa;
+    padding: 18px 36px;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 25%;
+}
+
+.left-logo {
+    justify-content: flex-start;
+}
+
+.right-logo {
+    justify-content: flex-end;
+}
+
+.header h3 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+    color: #222;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav{
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.nav .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 99%;
+    background: rgba(132, 155, 255, 0.55);  /* Slightly transparent blue */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    border-radius: 14px;
+    /* Glass effect! */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px); /* support for Safari */
+
+    /* Optional for better separation */
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 60px 0;
+    margin-top: 100px;
+    
+}
+ 
+.status-box {
+    background: #f2f2ff;
+    padding: 30px 30px 30px 30px;
+    border-radius: 30px;
+    margin-right: 50px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.09);
+
+    
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px); /* support for Safari */
+    
+}
+.status-box input {
+    display: block;
+    width: 400px;
+    margin: 14px 0;
+    padding: 16px;
+    border-radius: 18px;
+    border: none;
+    background: #ead4d4;
+    color: #222;
+    font-size: 1.09em;
+}
+.status-box .action-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+.status-box .action-row button {
+    width: auto;
+    padding: 10px 10px;
+    background: #ffffff;
+    border-radius: 13px;
+    border-color: #ffffff;
+}
+.status-box .submit button{
+    width: 200px;
+    height: 50px;
+    margin-left: 100px;
+    background-color: rgb(214, 236, 255);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.status-box .submit button:hover{
+    background: rgb(162, 211, 255);
+}
+.buttons-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.main-btn {
+    background: #faefef;
+    color: #222;
+    padding: 30px 40px;
+    font-size: 1.6em;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-left: 70px ;
+
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px); /* support for Safari */
+}
+.main-btn:hover {
+    background: #eaf6ff;
+}
+
+.main-footer {
+    background: #76cdfa;
+    color: #222;
+    text-align: center;
+    padding: 6px 0;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    font-size: 0.8em;
+    font-size: small;
+    background: rgba(132, 155, 255, 0.55);  /* Slightly transparent blue */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* Glass effect! */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px); /* support for Safari */
+
+}
+
+

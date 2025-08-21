@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef6ff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        p strong {
+            width: 200px;
+            display: inline-block;
+        }
+        .photo {
+            max-width: 150px;
+            display: block;
+            margin-top: 10px;
+        }
+        .doc-list {
+            margin-top: 10px;
+        }
+        .doc-list li {
+            margin-bottom: 5px;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4da3ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        a.button:hover {
+            background-color: #1d8fff;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Application Details</h2>
+
+    <p><strong>Registration No:</strong> {{ application.candidate.registration_no }}</p>
+    <p><strong>First Name:</strong> {{ application.candidate.first_name }}</p>
+    <p><strong>Last Name:</strong> {{ application.candidate.last_name }}</p>
+    <p><strong>Email:</strong> {{ application.candidate.email }}</p>
+    <p><strong>Phone:</strong> {{ application.candidate.phone }}</p>
+    <p><strong>Date of Birth:</strong> {{ application.candidate.dob }}</p>
+    <p><strong>Age:</strong> {{ application.candidate.age }}</p>
+    <p><strong>Gender:</strong> {{ application.candidate.gender }}</p>
+    <p><strong>Status:</strong> {{ application.status }}</p>
+    <p><strong>Submitted At:</strong> {{ application.submitted_at }}</p>
+    <p><strong>Reviewed At:</strong> {{ application.reviewed_at|default:"Not reviewed yet" }}</p>
+
+    <p><strong>Photo:</strong><br>
+        {% if application.candidate.photo %}
+            <img src="{{ application.candidate.photo.url }}" alt="Photo" class="photo">
+        {% else %}
+            No photo uploaded.
+        {% endif %}
+    </p>
+
+    <p><strong>Documents:</strong></p>
+    {% if documents %}
+        <ul class="doc-list">
+            {% for doc in documents %}
+                <li><a href="{{ doc.document_file.url }}" target="_blank">View Document {{ forloop.counter }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents uploaded.</p>
+    {% endif %}
+
+    <a class="button" href="{% url 'applications_list' %}">Back to list</a>
+</div>
+</body>
+</html>

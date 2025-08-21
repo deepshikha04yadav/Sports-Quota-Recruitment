@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Quota Registration</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <style>
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=refresh" />
+    <style>
+        
+    </style>
+</head>
+<body>
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
+
+    <div class="nav">
+        <div class="header">
+           <div class="logo left-logo">
+            <img src="{% static 'images/logo.png' %}" alt="Logo" />
+            </div>
+            <h3>Sports Quota Registration</h3>
+            <!-- Right logo -->
+            <div class="logo right-logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" />
+            </div>
+        </div>
+    </div>
+             
+
+    <br>
+        
+        <div class="container">
+            <!-- Left Status Box -->
+            <div class="status-box">
+                <form method="post" action="{% url 'check_status' %}">
+                    {% csrf_token %}
+                    <h3>Check Registration Status</h3>
+                    <input type="text" name="registration_no" placeholder="Enter registration no." required>
+                
+                    <div class="action-row">
+                        <label><h2>Captcha:</h2></label>
+                            
+                            <br>
+                        <b id="captcha-text" style="font-size:20px; background:#eee; padding:5px;">{{ captcha_code }}</b>
+                        <button type="button" onclick="regenerateCaptcha()" class=" material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg></button>
+                        <script>
+                        function regenerateCaptcha() {
+                            fetch("{% url 'regenerate_captcha' %}")
+                            .then(response => response.json())
+                            .then(data => {
+                                document.getElementById("captcha-text").textContent = data.captcha_code;
+                            });
+                        }
+                        </script>
+
+                    </div>
+
+                    <input type="text" name="entered_captcha" placeholder="Enter captcha" required>
+
+                    {% if status_message %}
+                        <p style="color:blue; font-weight:bold;">{{ status_message }}</p>
+                    {% endif %}
+                    <div class="submit">
+                        <button type="submit"><h3>Check Status</h3></button>
+                    </div>
+                </form>
+            </div>
+    
+        
+            <!-- Right Navigation Buttons -->
+            <div class="buttons-panel">
+                <button class="main-btn" onclick="window.location.href='/register'">New Registration</button>
+                <button class="main-btn" onclick="window.location.href='/admin_login'">Approval</button>
+            </div>
+        </div>
+   
+    <!-- <div class="footer">
+        &copy; Footer
+    </div> -->
+    <footer class="main-footer">
+    &copy; 2025 Sports Quota Portal | Contact: info@example.com
+</footer>
+
+</body>
+</html>

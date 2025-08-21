@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Applications</title>
+    <style>
+/* .top-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin: 24px 40px 0 40px;
+} */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 24px 40px 0 40px;
+    gap: 16px;
+}
+.logout-btn {
+    background: #e85c4a;
+    color: white;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background 0.2s;
+}
+.logout-btn:hover {
+    background: #c03c2b;
+}
+
+.search-form {
+    display: flex;
+    gap: 8px;
+}
+.search-form input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.search-form button {
+    background: #4da3ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.search-form button:hover {
+    background: #1d8fff;
+}
+
+
+        table { width:90%; margin:40px auto; border-collapse:collapse; }
+        th, td { padding:12px; border:1px solid #ccc; }
+        th { background:#eaf6ff; }
+        .action-btn { margin-right:8px; padding:6px 18px; border:none; border-radius:4px; cursor:pointer; font-weight:bold;}
+        .accept { background:#59d659; color:white; }
+        .reject { background:#e85c4a; color:white; }
+        .open { background:#4da3ff; color:white; }
+        h2 { text-align:center; margin-top:40px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+    </style>
+</head>
+<body>
+    <h2>Applications Overview</h2>
+
+    <div class="top-bar">
+        <form method="get" action="" class="search-form">
+            <input type="text" name="search_reg_no" placeholder="Search Registration No." value="{{ request.GET.search_reg_no }}">
+            <button type="submit">Search</button>
+        </form>
+        <form method="post" action="{% url 'logout' %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </div>
+
+    <table>
+        <tr>
+            <th>Registration Number</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+            <th>Open</th>
+        </tr>
+        {% for app in applications %}
+        <tr>
+            <td>{{ app.candidate.registration_no }}</td>
+            <td>{{ app.candidate.first_name }} {{ app.candidate.last_name }}</td>
+            <td>{{ app.candidate.email }}</td>
+            <td>{{ app.status }}</td>
+            <td>
+                {% if app.status == "Pending" %}
+                <form method="post" action="{% url 'review_application' app.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" name="action" value="Accepted" class="action-btn accept">Accept</button>
+                    <button type="submit" name="action" value="Rejected" class="action-btn reject">Reject</button>
+                </form>
+                {% else %}
+                    {{ app.status }}
+                {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'application_detail' app.id %}">
+                    <button class="action-btn open">Open</button>
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6" style="text-align:center;">No applications found.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
