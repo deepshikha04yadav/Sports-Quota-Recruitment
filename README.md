@@ -29,6 +29,7 @@ Sports-Quota-Recruitment/
 │── Sports_Qouta/            # Project configuration (settings, urls, wsgi, asgi)
 │── registration/            # Django app for handling candidate registration
 │── manage.py                # Django management script
+│── requirements.txt         # Python dependencies
 ```
 ## ⚙️ Prerequisites
 
