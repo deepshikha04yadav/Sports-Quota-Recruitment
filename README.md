@@ -23,10 +23,8 @@ Built using Django (Python Web Framework), this project ensures secure data hand
 ## 📂 Project Structure
 ```
 Sports-Quota-Recruitment/
-│── candidates/              # Django app for handling candidate registration
-│── sports_recruitment/      # Project configuration (settings, urls, wsgi, asgi)
-│── templates/               # HTML templates (UI for forms and pages)
-│── static/                  # CSS, JS, and other static assets
+│── Sports_Qouta/            # Project configuration (settings, urls, wsgi, asgi)
+│── registration/            # Django app for handling candidate registration
 │── db.sqlite3               # SQLite database (default database)
 │── manage.py                # Django management script
 ```
