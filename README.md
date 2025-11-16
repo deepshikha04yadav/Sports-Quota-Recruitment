@@ -44,10 +44,7 @@ Before setting up the project, make sure you have the following installed:
 * Virtualenv (recommended for dependency isolation)
 
 * Database
-
-  * SQLite (default, comes with Django)
-
-  * OR MySQL (optional – configure in settings.py)
+  * MySQL (optional – configure in settings.py)
 
 ## 🚀 Installation & Setup
 
