@@ -4,3 +4,4 @@ mysqlclient>=2.1.0  # Only if using MySQL (optional)
 Pillow>=9.0.0       # For handling images/documents
 gunicorn
 captcha
+whitenoise
