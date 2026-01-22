@@ -1,8 +1,10 @@
 Django>=4.0,<5.0
 djangorestframework>=3.14.0
-mysqlclient>=2.1.0  # Only if using MySQL (optional)
-Pillow>=9.0.0       # For handling images/documents
+# mysqlclient>=2.1.0  # Only if using MySQL (optional)
+Pillow>=9.0.0       
 gunicorn
 captcha
 whitenoise
 django-simple-captcha
+psycopg2-binary
+dj-database-url
