@@ -86,7 +86,6 @@ DATABASES = {
     )
 }
 
-import os
 from django.contrib.auth import get_user_model
 
 def main():
@@ -155,8 +154,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'photos')
