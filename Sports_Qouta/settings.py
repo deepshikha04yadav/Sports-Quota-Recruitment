@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-dr+kyvy92g94hyub*-6)r7t(g&li$p!#ytbswdigtew8cx9_$@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://sports-quota-recruitment.onrender.com']
+ALLOWED_HOSTS = ['.onrender.com']
 
 
 # Application definition
@@ -76,17 +76,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Sports_Qouta.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 import os
 import dj_database_url
