@@ -86,6 +86,28 @@ DATABASES = {
     )
 }
 
+import os
+from django.contrib.auth import get_user_model
+
+def main():
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Sports_Qouta.settings')
+
+    try:
+        from django.core.management import execute_from_command_line
+        import django
+        django.setup()
+
+        User = get_user_model()
+        if not User.objects.filter(username="admin").exists():
+            User.objects.create_superuser(
+                username="admin",
+                email="admin@gmail.com",
+                password="admin123"
+            )
+    except Exception:
+        pass
+
+    execute_from_command_line(sys.argv)
 
 
 # Password validation
