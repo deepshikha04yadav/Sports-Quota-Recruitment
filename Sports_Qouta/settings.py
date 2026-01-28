@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-dr+kyvy92g94hyub*-6)r7t(g&li$p!#ytbswdigtew8cx9_$@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['https://sports-quota-recruitment.onrender.com']
 
 
 # Application definition
