@@ -1,0 +1,1 @@
+gunicorn Sports_Qouta.wsgi:application
