@@ -52,23 +52,9 @@
      "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", 
      "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", 
      "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", 
-
+     "pk": 7, "fields": {"app_label": "captcha", "model": "captchastore"}}, {"model": "contenttypes.contenttype", 
+     "pk": 8, "fields": {"app_label": "registration", "model": "candidate"}}, {"model": "contenttypes.contenttype", 
+     "pk": 9, "fields": {"app_label": "registration", "model": "application"}}, {"model": "contenttypes.contenttype", 
+     "pk": 10, "fields": {"app_label": "registration", "model": "document"}}, {"model": "contenttypes.contenttype", 
+     "pk": 11, "fields": {"app_label": "registration", "model": "phoneotp"}}, {"model": "sessions.session", 
      
-     
-     "pk": 40, "fields": {"registration_no": "SPQ20251", "first_name": "ggg", "last_name": "rty", "email": "u@gmail.com", "phone": "8879878999", "age": 22, "dob": "2020-12-02", "gender": "female", "photo": "photos/northern-lights-4k_4kuMB7H.jpg", "transaction_no": 678564876}}, {"model": "registration.candidate", 
-     "pk": 41, "fields": {"registration_no": "SPQ20252", "first_name": "qwe", "last_name": "ggg", "email": "ughjm@gmail.com", "phone": "8879878993", "age": 22, "dob": "2020-12-04", "gender": "female", "photo": "photos/northern-lights-4k_jDcOVIU.jpg", "transaction_no": 655879}}, {"model": "registration.candidate", 
-     "pk": 42, "fields": {"registration_no": "SPQ20253", "first_name": "qwe", "last_name": "rty", "email": "ug@gmail.com", "phone": "8879878957", "age": 22, "dob": "2020-12-17", "gender": "female", "photo": "photos/northern-lights-4k_plNwyAK.jpg", "transaction_no": 56686473}}, {"model": "registration.candidate", 
-     "pk": 43, "fields": {"registration_no": "SPQ20254", "first_name": "qwe", "last_name": "rgr", "email": "ydeepshikha56@gmail.com", "phone": "8879878997", "age": 22, "dob": "2003-03-03", "gender": "female", "photo": "photos/re__KF0uQTn.png", "transaction_no": 4365654}}, {"model": "registration.document", 
-     "pk": 31, "fields": {"candidate": 40, "document_file": "documents/IBMDesign20250721-31-pu8tiy.pdf"}}, {"model": "registration.document", 
-     "pk": 32, "fields": {"candidate": 41, "document_file": "documents/IBMDesign20250721-31-pu8tiy_uk4nil1.pdf"}}, {"model": "registration.document", 
-     "pk": 33, "fields": {"candidate": 42, "document_file": "documents/Task_Details_3q0Ti8A.pdf"}}, {"model": "registration.document", 
-     "pk": 34, "fields": {"candidate": 43, "document_file": "documents/_Deepshikha_Yadav__Certificate.pdf"}}, {"model": "registration.application", 
-     "pk": 14, "fields": {"candidate": 40, "status": "Accepted", "submitted_at": "2025-08-14T15:28:03.198Z", "reviewed_at": "2025-08-14T15:28:24.282Z"}}, {"model": "registration.application", 
-     "pk": 15, "fields": {"candidate": 41, "status": "Rejected", "submitted_at": "2025-08-15T06:58:53.778Z", "reviewed_at": "2025-08-19T13:39:17.040Z"}}, {"model": "registration.application", 
-     "pk": 16, "fields": {"candidate": 42, "status": "Pending", "submitted_at": "2025-08-19T05:04:37.498Z", "reviewed_at": null}}, {"model": "registration.application", 
-     "pk": 17, "fields": {"candidate": 43, "status": "Pending", "submitted_at": "2025-11-16T13:45:10.397Z", "reviewed_at": null}}, {"model": "registration.phoneotp", 
-     "pk": 4, "fields": {"phone_number": "8879878999", "otp": "457601", "is_verified": true, "created_at": "2025-08-14T15:26:18.078Z"}}, {"model": "registration.phoneotp", 
-     "pk": 5, "fields": {"phone_number": "8879878993", "otp": "527197", "is_verified": false, "created_at": "2025-08-15T06:55:17.867Z"}}, {"model": "registration.phoneotp", 
-     "pk": 6, "fields": {"phone_number": "8879878953", "otp": "427219", "is_verified": true, "created_at": "2025-08-19T05:03:19.778Z"}}, {"model": "registration.phoneotp", 
-     "pk": 7, "fields": {"phone_number": "8879878957", "otp": "335609", "is_verified": true, "created_at": "2025-08-19T05:04:22.874Z"}}, {"model": "registration.phoneotp", 
-     "pk": 8, "fields": {"phone_number": "8879878997", "otp": "832480", "is_verified": true, "created_at": "2025-11-16T13:44:03.536Z"}}]
